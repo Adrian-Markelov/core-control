@@ -5,7 +5,7 @@
 -----------------
 # Overview
 Core Control represents a new generation of fitness apps where your ultimate potential is unleashed through computer vision. 
-
+https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md#keypoint-ordering-in-c-python
 Workflow: 
 =======
 ## Workflow/App lifecycle
