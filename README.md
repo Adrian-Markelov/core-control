@@ -6,6 +6,7 @@
 
 Core Control represents a new generation of fitness apps where your ultimate potential is unleashed through computer vision. 
 
+Workflow: 
 ## Features
 - **Functionality**:
     - **2D real-time multi-person keypoint detection and tracking**:
