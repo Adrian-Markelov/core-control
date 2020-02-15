@@ -1,22 +1,31 @@
 #track body keypoints in 2d
 import json
+import sys,os
+
 
 class Tracker():
 	def __init__(self):
+		self.joints = ["Nose","Neck","RShoulder","RElbow",
+											"RWrist","LShoulder","LElbow","LWrist",
+											"MidHip","RHip","RKnee","RAnkle","LHip",
+											"LKnee","LAnkle","REye","LEye","REar",
+											"LEar","LBigToe","LSmallToe","LHeel",
+											"RBigToe","RSmallToe","RHeel","Background"]
 		self.body_tracking = {"Nose":[],"Neck":[],"RShoulder":[],"RElbow":[],
 											"RWrist":[],"LShoulder":[],"LElbow":[],"LWrist":[],
 											"MidHip":[],"RHip":[],"RKnee":[],"RAnkle":[],"LHip":[],
 											"LKnee":[],"LAnkle":[],"REye":[],"LEye":[],"REar":[],
 											"LEar":[],"LBigToe":[],"LSmallToe":[],"LHeel":[],
 											"RBigToe":[],"RSmallToe":[],"RHeel":[],"Background":[]}
-		self.joints = list(self.body_tracking.keys())
 	def add_frame(self,json_fname):
 		with open(json_fname,'r') as f:
 			json_data = json.load(f)
 		pose_keypoints_2d_data = json_data['people'][0]['pose_keypoints_2d']
 		for i in range(25):
 			k = self.joints[i]
-			x,y,score = pose_keypoints_2d_data[i*3:(i+1)*3]
+			y,x,score = pose_keypoints_2d_data[i*3:(i+1)*3]
+			y *= 0.2
+			x *= 0.2
 			#self.get_3d_coords([x,y])
 			self.body_tracking[k].append([x,y])#,z])
 	def remove_null_points(self):
@@ -35,5 +44,3 @@ class Tracker():
 		pass
 	def __str__(self):
 		print(self.body_tracking)
-	
- 

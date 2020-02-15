@@ -30,14 +30,14 @@ def main ():
 	#cv2.waitKey(0) 
 	#cv2.destroyAllWindows() 
 
-'''
 
-  
-# Show blobs 
-cv2.imshow("Filtering Circular Blobs Only", blobs) 
-cv2.waitKey(0) 
-cv2.destroyAllWindows() 
-'''
+
+
+
+
+
+
+
 
 
 
@@ -141,5 +141,6 @@ def downscaleImage(image, percent):
 
 if __name__ == '__main__':
 	main()
+
 
 
