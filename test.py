@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import cv2
 img = cv2.imread('data/shallow_normal.jpg')
 
@@ -11,7 +10,7 @@ img = img[1500:3500,:,:]
 cv2.imshow("hello", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-=======
+
 import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
@@ -31,4 +30,3 @@ x,y = Lheelpath[:,0],Lheelpath[:,1]
 
 plt.plot(x,y,'.-')
 plt.savefig("lheelpath.pdf",dpi=150)
->>>>>>> 5d8f482ea09c045ab879b6ca9ae75f842bfb2635
